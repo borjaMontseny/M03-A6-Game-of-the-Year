@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Principal">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.columnIndex="1">
+        <columnConstraints>
+          <ColumnConstraints />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="labelRecord" alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold;" text="Rècord: 0 punts" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnSortir" mnemonicParsing="false" prefHeight="69.0" prefWidth="163.0" text="Sortir" />
+                  <Button fx:id="btnStartRestart" mnemonicParsing="false" prefHeight="67.0" prefWidth="200.0" text="Començar" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <TextField fx:id="textFieldPuntuacio" alignment="CENTER_RIGHT" editable="false" prefHeight="61.0" prefWidth="472.0" style="-fx-padding: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btn30" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" />
+            <Button fx:id="btn21" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn11" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btn01" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.rowIndex="1" />
+            <Button fx:id="btn10" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" />
+            <Button fx:id="btn20" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" />
+            <Button fx:id="btn33" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="btn31" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="btn02" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.rowIndex="2" />
+            <Button fx:id="btn12" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn22" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="btn32" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="btn03" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.rowIndex="3" />
+            <Button fx:id="btn13" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btn23" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="btn00" mnemonicParsing="false" prefHeight="158.0" prefWidth="152.0" text="?" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
