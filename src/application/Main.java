@@ -20,8 +20,6 @@ public class Main extends Application {
 			primaryStage.setTitle("A6 - The new Game of the Year");
 			primaryStage.show();
 
-			// En cas de fer servir CSS:
-			// scene.getStylesheets().add(getClass().getResource("/vista/styles.css").toExternalForm());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
