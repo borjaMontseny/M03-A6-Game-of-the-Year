@@ -70,22 +70,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btn30" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" />
-            <Button fx:id="btn21" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="btn11" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btn01" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.rowIndex="1" />
-            <Button fx:id="btn10" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" />
-            <Button fx:id="btn20" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" />
-            <Button fx:id="btn33" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="btn31" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="btn02" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.rowIndex="2" />
-            <Button fx:id="btn12" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btn22" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="btn32" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="btn03" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.rowIndex="3" />
-            <Button fx:id="btn13" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="btn23" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="btn00" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" text="?" />
+            <Button fx:id="btn3" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="3" />
+            <Button fx:id="btn6" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn5" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btn4" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.rowIndex="1" />
+            <Button fx:id="btn1" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="1" />
+            <Button fx:id="btn2" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="2" />
+            <Button fx:id="btn15" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="btn7" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="btn8" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.rowIndex="2" />
+            <Button fx:id="btn9" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn10" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="btn11" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="btn12" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.rowIndex="3" />
+            <Button fx:id="btn13" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btn14" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="btn0" disable="true" mnemonicParsing="false" onAction="#accionarBtn" prefHeight="158.0" prefWidth="152.0" style="-fx-font-weight: bold;" text="?" />
          </children>
       </GridPane>
    </children>

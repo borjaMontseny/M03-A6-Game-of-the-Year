@@ -11,7 +11,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 public class Principal {
 
@@ -19,16 +18,34 @@ public class Principal {
 	private Label labelRecord;
 
 	@FXML
-	private Button btn00;
+	private Button btn0;
 
 	@FXML
-	private Button btn01;
+	private Button btn1;
 
 	@FXML
-	private Button btn02;
+	private Button btn2;
 
 	@FXML
-	private Button btn03;
+	private Button btn3;
+
+	@FXML
+	private Button btn4;
+
+	@FXML
+	private Button btn5;
+
+	@FXML
+	private Button btn6;
+
+	@FXML
+	private Button btn7;
+
+	@FXML
+	private Button btn8;
+
+	@FXML
+	private Button btn9;
 
 	@FXML
 	private Button btn10;
@@ -43,28 +60,13 @@ public class Principal {
 	private Button btn13;
 
 	@FXML
-	private Button btn20;
+	private Button btn14;
 
 	@FXML
-	private Button btn21;
+	private Button btn15;
 
 	@FXML
-	private Button btn22;
-
-	@FXML
-	private Button btn23;
-
-	@FXML
-	private Button btn30;
-
-	@FXML
-	private Button btn31;
-
-	@FXML
-	private Button btn32;
-
-	@FXML
-	private Button btn33;
+	private TextField textFieldPuntuacio;
 
 	@FXML
 	private Button btnSortir;
@@ -72,16 +74,13 @@ public class Principal {
 	@FXML
 	private Button btnStartRestart;
 
-	@FXML
-	private TextField textFieldPuntuacio;
-
 	// Variables de control
 	int record = 0;
 	int puntuacio = 0;
 	private Random random = new Random();
 	int quantitatW = random1a3();
-	private String[][] arrayString = new String[4][4];
-	private Button[][] arrayBtns = new Button[4][4];
+	private String[] arrayString = new String[16];
+	private Button[] arrayBtns = new Button[16];
 	int contadorW = 0;
 	int contadorX = 0;
 	String lletraAleatoria = "";
@@ -90,27 +89,36 @@ public class Principal {
 	void startGame(ActionEvent event) {
 		btnStartRestart.setText("Reiniciar Pantalla");
 		omplirArrayString(arrayString);
-
+		actualitzarMarcadors();
+		omplirTaulell();
 	}
 
-	private void actualitzarRecord() {
+	private void actualitzarMarcadors() {
+		// Actualitza el marcador de punts
+		textFieldPuntuacio.setText(Integer.toString(puntuacio));
+		// Si els punts són superiors o igual al record, actualitzem el record
+		// i el marcador de record
 		if (puntuacio >= record) {
 			record = puntuacio;
 			labelRecord.setText("Rècord: " + record + " punts");
 		}
 	}
 
-	private void actualitzarPuntuacio() {
-		textFieldPuntuacio.setText(Integer.toString(puntuacio));
-	}
-
 	// Alerta al acabar la partida
-	private void alertEndGame(int record) {
+	private void gameOver(int record) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("GAME OVER");
 		alert.setHeaderText("Has obtingut " + record + " punts.");
-		alert.setContentText("Has obtingut " + record + " punts.");
 		alert.show();
+
+		puntuacio = 0;
+		textFieldPuntuacio.setText(Integer.toString(puntuacio));
+
+		// Deshabilitem els botons per a que no es pugui continuar jugant
+		for (int i = 0; i < arrayBtns.length; i++) {
+			arrayBtns[i].setDisable(true);
+		}
+
 	}
 
 	@FXML
@@ -120,49 +128,76 @@ public class Principal {
 
 	@FXML
 	private void accionarBtn(ActionEvent event) {
-		// Obtén el botón que ha sido clicado
-		Button botonClicado = (Button) event.getSource();
+		// Obtindre el botó clicat
+		Button botoClicat = (Button) event.getSource();
 
-		// Obtén la fila y columna del botón clicado
-		int fila = GridPane.getRowIndex(botonClicado) - 1;
-		int columna = GridPane.getColumnIndex(botonClicado) - 1;
+		for (int i = 0; i < arrayBtns.length; i++) {
+			if (arrayBtns[i] == botoClicat) {
+				arrayBtns[i].setText(arrayString[i]);
+				switch (arrayString[i]) {
+				case "O":
+					puntuacio++;
+					actualitzarMarcadors();
+					break;
+				case "W":
+					puntuacio = puntuacio * 2;
+					actualitzarMarcadors();
+					break;
+				case "X":
+					gameOver(record);
+					break;
 
-		System.out.println(arrayString[fila][columna]);
-
-		// arrayBtns[fila][columna].setText(arrayString[fila][columna]);
-
+				default:
+					break;
+				}
+				System.out.println(arrayString[i]);
+			}
+		}
 	}
 
 	private void omplirTaulell() {
-		arrayBtns[0][0] = btn00;
-		arrayBtns[0][1] = btn01;
-		arrayBtns[0][2] = btn02;
-		arrayBtns[0][3] = btn03;
-		arrayBtns[1][0] = btn10;
-		arrayBtns[1][1] = btn11;
-		arrayBtns[1][2] = btn12;
-		arrayBtns[1][3] = btn13;
-		arrayBtns[2][0] = btn20;
-		arrayBtns[2][1] = btn21;
-		arrayBtns[2][2] = btn22;
-		arrayBtns[2][3] = btn23;
-		arrayBtns[3][0] = btn30;
-		arrayBtns[3][1] = btn31;
-		arrayBtns[3][2] = btn32;
-		arrayBtns[3][3] = btn33;
+		arrayBtns[0] = btn0;
+		arrayBtns[1] = btn1;
+		arrayBtns[2] = btn2;
+		arrayBtns[3] = btn3;
+		arrayBtns[4] = btn4;
+		arrayBtns[5] = btn5;
+		arrayBtns[6] = btn6;
+		arrayBtns[7] = btn7;
+		arrayBtns[8] = btn8;
+		arrayBtns[9] = btn9;
+		arrayBtns[10] = btn10;
+		arrayBtns[11] = btn11;
+		arrayBtns[12] = btn12;
+		arrayBtns[13] = btn13;
+		arrayBtns[14] = btn14;
+		arrayBtns[15] = btn15;
+
+		for (int i = 0; i < arrayBtns.length; i++) {
+			arrayBtns[i].setDisable(false);
+			arrayBtns[i].setText("?");
+		}
 	}
 
-	private void omplirArrayString(String[][] arrayString) {
+	private void omplirArrayString(String[] arrayString) {
+
+		// Buidar l'array prèviament
+		for (int fil = 0; fil < arrayString.length; fil++) {
+			arrayString[fil] = null;
+		}
+
+		// Reiniciar contadors
+		quantitatW = random1a3();
+		contadorW = 0;
+		contadorX = 0;
 
 		// Omplir amb X
 		while (contadorX < 2) {
 			for (int fil = 0; fil < arrayString.length; fil++) {
-				for (int col = 0; col < arrayString[fil].length; col++) {
-					lletraAleatoria = crearLletraAleatoria();
-					if (arrayString[fil][col] == null && lletraAleatoria == "X" && contadorX < 2) {
-						contadorX++;
-						arrayString[fil][col] = lletraAleatoria;
-					}
+				lletraAleatoria = crearLletraAleatoria();
+				if (arrayString[fil] == null && lletraAleatoria == "X" && contadorX < 2) {
+					contadorX++;
+					arrayString[fil] = lletraAleatoria;
 				}
 			}
 		}
@@ -170,31 +205,27 @@ public class Principal {
 		// Omplir amb W
 		while (contadorW < quantitatW) {
 			for (int fil = 0; fil < arrayString.length; fil++) {
-				for (int col = 0; col < arrayString[fil].length; col++) {
-					lletraAleatoria = crearLletraAleatoria();
-					if (arrayString[fil][col] == null && lletraAleatoria == "W" && contadorW < quantitatW) {
-						contadorW++;
-						arrayString[fil][col] = lletraAleatoria;
-					}
+				lletraAleatoria = crearLletraAleatoria();
+				if (arrayString[fil] == null && lletraAleatoria == "W" && contadorW < quantitatW) {
+					contadorW++;
+					arrayString[fil] = lletraAleatoria;
 				}
 			}
 		}
 
 		// Omplir amb O
 		for (int fil = 0; fil < arrayString.length; fil++) {
-			for (int col = 0; col < arrayString[fil].length; col++) {
-				if (arrayString[fil][col] == null) {
-					arrayString[fil][col] = "O";
-				}
-
+			if (arrayString[fil] == null) {
+				arrayString[fil] = "O";
 			}
 		}
 
 		for (int fil = 0; fil < arrayString.length; fil++) {
-			for (int col = 0; col < arrayString[fil].length; col++) {
-				System.out.print(arrayString[fil][col]);
+			if ((fil + 1) % 4 == 0 && fil > 0) {
+				System.out.println(arrayString[fil]);
+			} else {
+				System.out.print(arrayString[fil]);
 			}
-			System.out.println();
 		}
 
 	}
@@ -216,12 +247,4 @@ public class Principal {
 			return "Error";
 		}
 	}
-
-	@FXML
-	private void initialize() {
-		actualitzarRecord();
-		actualitzarPuntuacio();
-		omplirTaulell();
-	}
-
 }
