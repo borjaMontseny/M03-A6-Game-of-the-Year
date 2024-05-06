@@ -18,52 +18,7 @@ public class Principal {
 	private Label labelRecord;
 
 	@FXML
-	private Button btn0;
-
-	@FXML
-	private Button btn1;
-
-	@FXML
-	private Button btn2;
-
-	@FXML
-	private Button btn3;
-
-	@FXML
-	private Button btn4;
-
-	@FXML
-	private Button btn5;
-
-	@FXML
-	private Button btn6;
-
-	@FXML
-	private Button btn7;
-
-	@FXML
-	private Button btn8;
-
-	@FXML
-	private Button btn9;
-
-	@FXML
-	private Button btn10;
-
-	@FXML
-	private Button btn11;
-
-	@FXML
-	private Button btn12;
-
-	@FXML
-	private Button btn13;
-
-	@FXML
-	private Button btn14;
-
-	@FXML
-	private Button btn15;
+	private Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15;
 
 	@FXML
 	private TextField textFieldPuntuacio;
@@ -180,7 +135,6 @@ public class Principal {
 	}
 
 	private void omplirArrayString(String[] arrayString) {
-
 		// Buidar l'array prèviament
 		for (int fil = 0; fil < arrayString.length; fil++) {
 			arrayString[fil] = null;
